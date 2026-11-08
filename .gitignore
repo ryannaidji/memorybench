@@ -5,3 +5,5 @@ memory.db
 .env
 .pytest_cache/
 eval-ci.json
+finetune/*.gguf
+finetune/train.jsonl
