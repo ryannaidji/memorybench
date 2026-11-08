@@ -1,0 +1,599 @@
+{
+  "model": "memorybench-qwen1.5b-ft",
+  "prompt": "v2",
+  "conversations": 60,
+  "gold_facts": 100,
+  "predicted_facts": 101,
+  "precision": 0.921,
+  "recall": 0.93,
+  "f1": 0.925,
+  "retrieval_recall_at_5": 0.93,
+  "retrieval_mrr": 0.749,
+  "latency_ms_p50": 6359,
+  "latency_ms_p95": 8545,
+  "parse_errors": 0,
+  "per_conversation": [
+    {
+      "conv_id": "cust_00_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic",
+        "contact_preference: Prefers email over phone calls"
+      ]
+    },
+    {
+      "conv_id": "cust_00_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Prefers short bullet-point replies",
+        "plan: Has the Pro plan with 25 seats"
+      ]
+    },
+    {
+      "conv_id": "cust_00_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 0,
+      "pred_values": [
+        "issue: Webhooks to the server time out"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Prefers support in Spanish",
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "issue: Webhooks to the server time out",
+        "contact_preference: Prefers SMS; rarely checks email"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Uses the free tier"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Wants calls only after 6pm Eastern",
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Has the Pro plan with 25 seats",
+        "preference: Prefers the dark theme"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "issue: Was charged twice for October"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: Leads the data team at a logistics company",
+        "plan: Upgraded to the Enterprise plan"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Prefers email over phone calls",
+        "issue: CSV export truncates after 10,000 rows"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "preference: Wants invoices as PDF"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Prefers support in Spanish",
+        "issue: Mobile app crashes when opening the reports tab"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: Has 12 volunteers",
+        "plan: Upgraded to the Enterprise plan"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Wants calls only after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Has the Pro plan with 25 seats",
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "preference: Prefers support in Spanish",
+        "issue: Webhooks to the server time out"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone calls"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "contact_preference: Prefers SMS; rarely checks email"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Uses the free tier",
+        "profile: Runs a small e-commerce shop in Miami"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 0,
+      "pred_values": [
+        "issue: Webhooks to our server time out"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening the reports tab",
+        "contact_preference: Wants calls only after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Pays annually for the Business plan",
+        "preference: Prefers short bullet-point replies"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "profile: Runs a small e-commerce shop in Miami"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: Okta SSO login fails for new users",
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers WhatsApp",
+        "preference: Prefers dark theme"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pays annually for the Business plan"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: Okta SSO login fails for new users",
+        "preference: Prefers support in Spanish"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: Leads the data team at a logistics company",
+        "contact_preference: Wants calls only after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pays annually for the Business plan"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Upgraded to the Enterprise plan",
+        "issue: Was charged twice for October"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Wants calls only after 6pm Eastern",
+        "preference: Wants invoices as PDF"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: Was charged twice for October",
+        "profile: Leads the data team at a logistics company"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "plan: Upgraded to the Enterprise plan"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Wants calls only after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic",
+        "issue: Mobile app crashes when opening the reports tab"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Upgraded to the Enterprise plan",
+        "preference: Wants invoices as PDF"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone calls"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Has the Pro plan with 25 seats",
+        "preference: Prefers short bullet-point replies"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic",
+        "issue: CSV export truncates after 10,000 rows"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone calls"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Prefers email over phone calls",
+        "issue: Okta SSO login fails for new users"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "plan: Has the Pro plan with 25 seats"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: CSV export truncates after 10,000 rows",
+        "profile: Runs a small e-commerce shop in Miami"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "contact_preference: Prefers email over phone calls"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pays annually for the Business plan"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "contact_preference: Wants calls only after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening the reports tab",
+        "profile: Runs a small e-commerce shop in Miami"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pays annually for the Business plan"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "preference: Wants invoices as PDF",
+        "issue: Was charged twice for October"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Wants calls only after 6pm Eastern",
+        "plan: Has the Pro plan with 25 seats"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "profile: Has 12 volunteers using the app"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers WhatsApp",
+        "preference: Prefers dark theme"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening the reports tab",
+        "profile: Has 12 volunteers",
+        "contact_preference: Reports bad weather"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "plan: Uses the free tier"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers WhatsApp",
+        "preference: Wants invoices as PDF"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "plan: Upgraded to the Enterprise plan",
+        "issue: Okta SSO login fails for new users"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c2",
+      "gold": 1,
+      "pred": 1,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin at a 40-person dental clinic"
+      ]
+    }
+  ],
+  "date": "2026-11-07"
+}

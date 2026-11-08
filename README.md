@@ -21,9 +21,34 @@ Measured on a laptop CPU (Intel, 8 cores, no GPU), temperature 0, embeddings `no
 |---|---|---|---|---|---|---|---|
 | qwen2.5:3b | v1 | 0.30 | 0.65 | **0.41** | 0.63 | 0.46 | 18.9 s / 90.8 s |
 | qwen2.5:3b | v2 | 0.84 | 0.60 | **0.70** | 0.63 | 0.52 | 10.2 s / 14.9 s |
+| qwen2.5:1.5b (base) | v2 | 0.56 | 0.44 | **0.49** | 0.47 | 0.38 | 5.9 s / 13.1 s |
+| **qwen2.5:1.5b + LoRA (fine-tuned)** | v2 | 0.92 | 0.93 | **0.93** | 0.93 | 0.75 | 6.4 s / 8.5 s |
 | qwen2.5:1.5b * | v2 | 0.37 | 0.28 | **0.32** | 0.32 | 0.22 | 6.9 s / 22.8 s |
 
 \* first 15 conversations only, run before the placeholder filter. Too weak to be a useful gate, so CI uses qwen2.5:3b. The v1 row was also measured before the placeholder filter was added.
+
+## Fine-tuning: a 1.5B model beats the 3B one
+
+A LoRA adapter (r=16) on `Qwen2.5-1.5B-Instruct`, trained with Unsloth on a **free Colab T4 GPU** in **3.7 minutes**
+on 360 synthetic conversations ([`finetune/finetune_colab.ipynb`](finetune/finetune_colab.ipynb)), exported to GGUF q4_k_m
+and served by Ollama ([`finetune/Modelfile`](finetune/Modelfile)).
+
+- Training data is generated separately (`evals/gen_train.py`, seed 11, different customers) and **one phrasing template per
+  category is held out**: 18 of the 100 eval facts use phrasings the model never saw.
+- Same 1.5B model, same prompt: **F1 0.49 → 0.93**. It also beats the 3B prompt-only model (0.70) while being faster (p50 6.4 s vs 10.2 s).
+
+Recall split by whether the phrasing appeared in training:
+
+| Model | Seen phrasings (82 facts) | Unseen phrasings (18 facts) |
+|---|---|---|
+| qwen2.5:1.5b base | 0.45 | 0.39 |
+| qwen2.5:3b, prompt v2 | 0.62 | 0.50 |
+| qwen2.5:1.5b + LoRA | 1.00 | **0.61** |
+
+Honest reading: perfect recall on seen phrasings is partly template memorisation (the data is synthetic); the unseen column
+is the meaningful number, and the fine-tuned model still generalises better than both prompt-only baselines.
+Lesson learned: the exported GGUF had no chat template; served raw, outputs were garbage until the Qwen chat template was
+added to the Modelfile.
 
 **What changed between v1 and v2.** Error analysis of the v1 run showed the model over-extracting
 (218 facts for 100 gold): invented details ("Technology company, specializes in e-commerce"), one sentence
@@ -90,9 +115,9 @@ API:
 - Semantic matching at a 0.80 threshold can accept a near-miss or reject a correct paraphrase.
 - The store is SQLite + NumPy cosine search, sized for a demo; the `FactStore` interface is what a Postgres + pgvector
   backend would implement.
-- Small CPU models: recall is the weak point (the 3B model misses ~40% of facts). Larger models are a config change.
+- Prompt-only small models miss many facts (3B recall 0.60); the fine-tuned 1.5B fixes most of it on this distribution, but its training data shares templates with the eval set (see the seen/unseen split).
 
 ## Stack
 
-Python 3.11 · FastAPI · Pydantic · OpenAI-compatible client · Ollama (qwen2.5) · nomic-embed-text · NumPy · SQLite ·
+Python 3.11 · Unsloth / LoRA (PEFT) · Hugging Face · FastAPI · Pydantic · OpenAI-compatible client · Ollama (qwen2.5) · nomic-embed-text · NumPy · SQLite ·
 pytest · GitHub Actions · Docker Compose · Streamlit

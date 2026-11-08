@@ -1,0 +1,9 @@
+{
+  "train_minutes": 3.7,
+  "train_loss": 0.05328217940405011,
+  "eval": {
+    "eval_loss": 0.0002628405636642128
+  },
+  "gpu": "Tesla T4",
+  "examples": 360
+}
