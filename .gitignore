@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+memory.db
+.env
+.pytest_cache/
+eval-ci.json

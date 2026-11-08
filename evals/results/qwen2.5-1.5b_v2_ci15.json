@@ -1,0 +1,150 @@
+{
+  "model": "qwen2.5:1.5b",
+  "prompt": "v2",
+  "conversations": 15,
+  "gold_facts": 25,
+  "predicted_facts": 19,
+  "precision": 0.368,
+  "recall": 0.28,
+  "f1": 0.318,
+  "retrieval_recall_at_5": 0.32,
+  "retrieval_mrr": 0.22,
+  "latency_ms_p50": 6865,
+  "latency_ms_p95": 22759,
+  "parse_errors": 0,
+  "per_conversation": [
+    {
+      "conv_id": "cust_00_c0",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_00_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "plan: On the Pro plan with 25 seats",
+        "contact_preference: Prefers short, bullet-point replies"
+      ]
+    },
+    {
+      "conv_id": "cust_00_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 0,
+      "pred_values": [
+        "issue: Webhooks to the server have been timing out since Monday",
+        "contact_preference: Not specified in the conversation"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c0",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "preference: Prefers communication in Spanish"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c1",
+      "gold": 2,
+      "pred": 1,
+      "tp": 0,
+      "pred_values": [
+        "issue: Webhooks timing out on server"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c2",
+      "gold": 1,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_02_c0",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_02_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "plan: Has the Pro plan with 25 seats",
+        "preference: Prefers dark theme",
+        "issue: None reported"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c2",
+      "gold": 1,
+      "pred": 4,
+      "tp": 1,
+      "pred_values": [
+        "issue: Charged twice for October",
+        "contact_preference: Not specified",
+        "plan: Not specified",
+        "preference: Not specified"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c0",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_03_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "issue: CSV export cuts off after 10,000 rows",
+        "contact_preference: Preferred to email",
+        "preference: Not available for calls"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "preference: Prefers invoices in PDF format",
+        "issue: Needs invoices sent as PDF"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c0",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_04_c1",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_04_c2",
+      "gold": 1,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    }
+  ],
+  "date": "2026-11-07"
+}

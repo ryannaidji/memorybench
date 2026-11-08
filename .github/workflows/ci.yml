@@ -1,0 +1,49 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+
+  eval-gate:
+    # Real LLM eval on a free GitHub runner: Ollama + a small open-weight model on CPU.
+    # Fails the build if extraction/retrieval quality drops below evals/thresholds.json.
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LLM_MODEL: qwen2.5:3b
+      EMBED_MODEL: nomic-embed-text
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Install Ollama and pull models
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (ollama serve > /tmp/ollama.log 2>&1 &)
+          for i in $(seq 1 30); do curl -s localhost:11434/api/tags && break; sleep 1; done
+          ollama pull $LLM_MODEL
+          ollama pull $EMBED_MODEL
+      - name: Eval gate (first 15 conversations of the golden set)
+        run: python -m evals.run_eval --model $LLM_MODEL --limit 15 --out eval-ci.json --gate evals/thresholds-ci.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: eval-ci.json

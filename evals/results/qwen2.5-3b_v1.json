@@ -1,0 +1,715 @@
+{
+  "model": "qwen2.5:3b",
+  "conversations": 60,
+  "gold_facts": 100,
+  "predicted_facts": 218,
+  "precision": 0.298,
+  "recall": 0.65,
+  "f1": 0.409,
+  "retrieval_recall_at_5": 0.63,
+  "retrieval_mrr": 0.458,
+  "latency_ms_p50": 18932,
+  "latency_ms_p95": 90817,
+  "parse_errors": 1,
+  "per_conversation": [
+    {
+      "conv_id": "cust_00_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Prefers email over phone",
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: Cannot take calls at work"
+      ]
+    },
+    {
+      "conv_id": "cust_00_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pro plan with 25 seats",
+        "contact_preference: Prefers short, bullet point replies",
+        "profile: 25-person team in [indeterminate industry]"
+      ]
+    },
+    {
+      "conv_id": "cust_00_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "issue: Webhooks timing out since Monday",
+        "contact_preference: Bye",
+        "profile: Technology company, specializes in e-commerce"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c0",
+      "gold": 2,
+      "pred": 5,
+      "tp": 0,
+      "pred_values": [
+        "profile: role: IT admin",
+        "profile: company size: 40 people",
+        "profile: industry: dental clinic",
+        "contact_preference: prefers Spanish language",
+        "preference: prefers Spanish language"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "issue: Webhooks timing out since Monday",
+        "contact_preference: Text if anything changes",
+        "profile: Server operator in the technology industry"
+      ]
+    },
+    {
+      "conv_id": "cust_01_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "plan: switched to free tier",
+        "profile: in a free tier for a business"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: contact after 6pm Eastern",
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: No response to weather comment"
+      ]
+    },
+    {
+      "conv_id": "cust_02_c1",
+      "gold": 2,
+      "pred": 0,
+      "tp": 0,
+      "pred_values": []
+    },
+    {
+      "conv_id": "cust_02_c2",
+      "gold": 1,
+      "pred": 7,
+      "tp": 1,
+      "pred_values": [
+        "issue: charged twice for October",
+        "plan: no active subscription plan provided",
+        "contact_preference: no preference provided",
+        "profile: customer role not specified",
+        "preference: no stable preferences provided",
+        "profile: location not specified",
+        "profile: industry not specified"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "profile: role: data team leader",
+        "profile: industry: logistics",
+        "plan: upgraded to Enterprise plan"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: prefers email over phone",
+        "issue: CSV export cuts off after 10,000 rows",
+        "profile: works in an industry not specified"
+      ]
+    },
+    {
+      "conv_id": "cust_03_c2",
+      "gold": 1,
+      "pred": 6,
+      "tp": 0,
+      "pred_values": [
+        "profile: industry: finance",
+        "profile: role: accountant",
+        "profile: location: not provided",
+        "plan: invoice format: PDF",
+        "preference: prefers email over phone",
+        "issue: needs PDF invoices"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c0",
+      "gold": 2,
+      "pred": 6,
+      "tp": 1,
+      "pred_values": [
+        "profile: industry: Technology",
+        "profile: role: Developer",
+        "issue: Mobile app crashes when opening reports tab",
+        "contact_preference: Contact channel: Phone",
+        "preference: Language: Spanish",
+        "profile: team_size: Small"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c1",
+      "gold": 2,
+      "pred": 6,
+      "tp": 1,
+      "pred_values": [
+        "profile: Role: Nonprofit Manager",
+        "profile: Industry: Nonprofit",
+        "profile: Team size: 12 volunteers",
+        "plan: Upgraded to Enterprise",
+        "contact_preference: Typing from phone",
+        "issue: Upgraded to Enterprise last week"
+      ]
+    },
+    {
+      "conv_id": "cust_04_c2",
+      "gold": 1,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: prefers to be contacted after 6pm Eastern",
+        "plan: no active subscription plan mentioned",
+        "issue: no specific issue reported",
+        "preference: prefers email over phone",
+        "profile: in a meeting all day"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "plan: Pro plan with 25 seats",
+        "issue: None reported"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c1",
+      "gold": 2,
+      "pred": 6,
+      "tp": 0,
+      "pred_values": [
+        "profile: industry: technology",
+        "profile: industry: software development",
+        "issue: Webhooks timing out",
+        "contact_preference: prefers Spanish language",
+        "preference: prefers email over phone",
+        "plan: no active subscription plan mentioned"
+      ]
+    },
+    {
+      "conv_id": "cust_05_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone",
+        "issue: Cannot take calls at work",
+        "profile: Works in a call-intensive environment"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c0",
+      "gold": 2,
+      "pred": 5,
+      "tp": 0,
+      "pred_values": [
+        "profile: Omar works in accounting",
+        "plan: Omar has a product tier or subscription plan",
+        "issue: Omar needs invoices in PDF format",
+        "contact_preference: Omar prefers text messages",
+        "preference: Omar prefers to be texted about changes"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: e-commerce shop based in Miami",
+        "plan: on free tier",
+        "profile: small business"
+      ]
+    },
+    {
+      "conv_id": "cust_06_c2",
+      "gold": 1,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "issue: Webhooks timing out since Monday",
+        "plan: No active subscription plan provided",
+        "contact_preference: No preference expressed",
+        "preference: English language",
+        "profile: Omar, likely a developer or IT professional, not enough info to determine team size or location"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening reports tab",
+        "contact_preference: Call after 6pm Eastern time",
+        "profile: In a meeting all day, prefers calls after 6pm Eastern"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c1",
+      "gold": 2,
+      "pred": 5,
+      "tp": 0,
+      "pred_values": [
+        "profile: Elena pays annually for the Business plan",
+        "plan: Elena has the Business plan",
+        "issue: Coffee spill",
+        "contact_preference: Prefers short, bullet point replies",
+        "profile: Elena works in a coffee shop"
+      ]
+    },
+    {
+      "conv_id": "cust_07_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "profile: small e-commerce shop based in Miami",
+        "issue: no further issues reported"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: Role: IT admin",
+        "profile: Business size: 40-person dental clinic",
+        "issue: SSO login with Okta keeps failing for new users"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 0,
+      "pred_values": [
+        "contact_preference: WhatsApp preferred",
+        "profile: David is a user of a dark theme preference",
+        "profile: David uses a light theme that hurts his eyes"
+      ]
+    },
+    {
+      "conv_id": "cust_08_c2",
+      "gold": 1,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "plan: Business plan, annual payment",
+        "contact_preference: No preference expressed",
+        "issue: No specific issue reported",
+        "preference: No stable preferences provided",
+        "profile: Business customer, pays annually for a plan"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c0",
+      "gold": 2,
+      "pred": 4,
+      "tp": 1,
+      "pred_values": [
+        "profile: industry: Technology",
+        "issue: SSO login with Okta fails for new users",
+        "contact_preference: prefers Spanish",
+        "preference: language: Spanish"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: runs data team at logistics company",
+        "contact_preference: prefers to be contacted after 6pm Eastern time",
+        "profile: involves in meetings all day"
+      ]
+    },
+    {
+      "conv_id": "cust_09_c2",
+      "gold": 1,
+      "pred": 4,
+      "tp": 0,
+      "pred_values": [
+        "plan: Business plan",
+        "contact_preference: Bye",
+        "profile: Business customer",
+        "profile: Annual payment"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "profile: Enterprise customer",
+        "plan: Upgraded to Enterprise last week",
+        "issue: Charged twice for October"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: contact after 6pm Eastern time",
+        "profile: involves accounting team",
+        "preference: prefers PDF invoice format"
+      ]
+    },
+    {
+      "conv_id": "cust_10_c2",
+      "gold": 1,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: No specific issue reported",
+        "plan: No subscription plan change mentioned",
+        "contact_preference: Bye",
+        "preference: No stable preferences mentioned"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c0",
+      "gold": 2,
+      "pred": 5,
+      "tp": 2,
+      "pred_values": [
+        "profile: Runs the data team at a logistics company",
+        "issue: Was charged twice for October",
+        "contact_preference: No preference stated",
+        "plan: No subscription plan or tier stated",
+        "preference: No stable preferences stated"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c1",
+      "gold": 2,
+      "pred": 4,
+      "tp": 0,
+      "pred_values": [
+        "profile: Yuki works in accounting",
+        "plan: Upgraded to Enterprise",
+        "issue: Requested PDF invoices",
+        "contact_preference: Typing from phone"
+      ]
+    },
+    {
+      "conv_id": "cust_11_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Contact after 6pm Eastern time",
+        "profile: Involves in meetings all day",
+        "issue: Scheduled call during their meeting time"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: Mobile app crashes when opening reports tab",
+        "plan: Not applicable (no subscription plan mentioned)"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "profile: Carlos upgraded to Enterprise last week",
+        "preference: Prefers PDF invoice format",
+        "issue: Needs PDF invoices for accounting"
+      ]
+    },
+    {
+      "conv_id": "cust_12_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone",
+        "issue: Cannot take calls at work",
+        "profile: Works in a call-intensive environment"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "plan: Pro plan with 25 seats",
+        "contact_preference: Prefers short, bullet point replies",
+        "profile: Business with 25 employees"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 2,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: CSV export cuts off after 10,000 rows"
+      ]
+    },
+    {
+      "conv_id": "cust_13_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers email over phone",
+        "issue: Cannot take calls at work",
+        "profile: Works in a call-intensive environment"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "contact_preference: Prefers email over phone",
+        "issue: SSO login with Okta keeps failing for new users",
+        "profile: New user login issues"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 0,
+      "pred_values": [
+        "profile: Ahmed is a Pro plan customer with 25 seats",
+        "preference: Ahmed prefers PDF invoice format",
+        "plan: Ahmed is on the Pro plan"
+      ]
+    },
+    {
+      "conv_id": "cust_14_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "profile: IT admin for a 40-person dental clinic",
+        "issue: Coffee spill",
+        "plan: No active subscription or plan"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 2,
+      "pred_values": [
+        "profile: e-commerce shop based in Miami",
+        "issue: CSV export cuts off after 10,000 rows",
+        "contact_preference: Bye (implied preference for ending conversation without further interaction)"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c1",
+      "gold": 2,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "profile: Grace works in accounting",
+        "contact_preference: Prefers email over phone",
+        "plan: Not specified",
+        "issue: Needs PDF invoices",
+        "preference: Prefers email for communication"
+      ]
+    },
+    {
+      "conv_id": "cust_15_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "plan: Business plan, annual payment",
+        "profile: Business customer, annual subscription",
+        "profile: Based in a location with poor weather"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c0",
+      "gold": 2,
+      "pred": 5,
+      "tp": 1,
+      "pred_values": [
+        "profile: Ivan - Accounting role in Eastern timezone",
+        "plan: Not specified",
+        "issue: Needs PDF invoices",
+        "contact_preference: Only call after 6pm Eastern time",
+        "preference: Prefers email over phone"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c1",
+      "gold": 2,
+      "pred": 5,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening reports tab",
+        "profile: Small e-commerce shop based in Miami",
+        "contact_preference: No preference stated",
+        "plan: No subscription plan or product tier mentioned",
+        "preference: No stable preferences stated"
+      ]
+    },
+    {
+      "conv_id": "cust_16_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "plan: Business plan, annually paid",
+        "profile: Business customer, annual payment"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c0",
+      "gold": 2,
+      "pred": 4,
+      "tp": 2,
+      "pred_values": [
+        "profile: Lea is in accounting",
+        "plan: Lea has a subscription plan",
+        "issue: Lea was charged twice for October",
+        "preference: Lea prefers PDF invoices"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c1",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: prefers not to be contacted during work hours",
+        "plan: on Pro plan with 25 seats",
+        "profile: in a company with 25 employees in the industry not specified"
+      ]
+    },
+    {
+      "conv_id": "cust_17_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "profile: Nonprofit with 12 volunteers",
+        "issue: App usage by volunteers"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c0",
+      "gold": 2,
+      "pred": 3,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers WhatsApp",
+        "profile: Works in a coffee shop",
+        "preference: Prefers dark theme"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c1",
+      "gold": 2,
+      "pred": 6,
+      "tp": 2,
+      "pred_values": [
+        "issue: Mobile app crashes when opening reports tab",
+        "profile: Nonprofit with 12 volunteers using the app",
+        "contact_preference: No preference expressed",
+        "plan: No subscription plan or tier mentioned",
+        "preference: No stable preferences provided",
+        "profile: Nonprofit organization"
+      ]
+    },
+    {
+      "conv_id": "cust_18_c2",
+      "gold": 1,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "plan: switched to free tier",
+        "profile: in industry X, team size Y, located Z"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c0",
+      "gold": 2,
+      "pred": 6,
+      "tp": 1,
+      "pred_values": [
+        "contact_preference: Prefers WhatsApp for contact",
+        "profile: Works in an accounting team",
+        "plan: No specific subscription plan mentioned",
+        "issue: Requests PDF invoices",
+        "preference: Prefers email over phone",
+        "profile: Uses WhatsApp for communication"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c1",
+      "gold": 2,
+      "pred": 2,
+      "tp": 1,
+      "pred_values": [
+        "plan: Upgraded to Enterprise",
+        "issue: SSO login with Okta fails for new users"
+      ]
+    },
+    {
+      "conv_id": "cust_19_c2",
+      "gold": 1,
+      "pred": 3,
+      "tp": 0,
+      "pred_values": [
+        "profile: role: IT admin",
+        "profile: team_size: 40 persons",
+        "profile: industry: dental clinic"
+      ]
+    }
+  ],
+  "date": "2026-11-07",
+  "prompt": "v1"
+}

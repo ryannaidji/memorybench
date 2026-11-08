@@ -1,0 +1,100 @@
+{"customer_id": "cust_00", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_00", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_00", "query": "How does the customer like answers formatted?", "category": "preference", "expected": "Prefers short bullet-point replies"}
+{"customer_id": "cust_00", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_00", "query": "What problems has the customer reported?", "category": "issue", "expected": "Webhooks time out since Monday"}
+{"customer_id": "cust_01", "query": "What language does the customer prefer?", "category": "preference", "expected": "Prefers support in Spanish"}
+{"customer_id": "cust_01", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_01", "query": "What problems has the customer reported?", "category": "issue", "expected": "Webhooks time out since Monday"}
+{"customer_id": "cust_01", "query": "What channel does the customer prefer?", "category": "contact_preference", "expected": "Prefers SMS; rarely checks email"}
+{"customer_id": "cust_01", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Uses the free tier"}
+{"customer_id": "cust_02", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_02", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_02", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_02", "query": "Any UI preferences?", "category": "preference", "expected": "Prefers the dark theme"}
+{"customer_id": "cust_02", "query": "Any billing problems?", "category": "issue", "expected": "Was charged twice for October"}
+{"customer_id": "cust_03", "query": "Who is this customer?", "category": "profile", "expected": "Leads the data team at a logistics company"}
+{"customer_id": "cust_03", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_03", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_03", "query": "Any data export issues?", "category": "issue", "expected": "CSV export truncates after 10,000 rows"}
+{"customer_id": "cust_03", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_04", "query": "What language does the customer prefer?", "category": "preference", "expected": "Prefers support in Spanish"}
+{"customer_id": "cust_04", "query": "What problems has the customer reported?", "category": "issue", "expected": "Mobile app crashes when opening the reports tab"}
+{"customer_id": "cust_04", "query": "What business is the customer in?", "category": "profile", "expected": "Nonprofit with about 12 volunteer users"}
+{"customer_id": "cust_04", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_04", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_05", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_05", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_05", "query": "What language does the customer prefer?", "category": "preference", "expected": "Prefers support in Spanish"}
+{"customer_id": "cust_05", "query": "What problems has the customer reported?", "category": "issue", "expected": "Webhooks time out since Monday"}
+{"customer_id": "cust_05", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_06", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_06", "query": "What channel does the customer prefer?", "category": "contact_preference", "expected": "Prefers SMS; rarely checks email"}
+{"customer_id": "cust_06", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Uses the free tier"}
+{"customer_id": "cust_06", "query": "What business is the customer in?", "category": "profile", "expected": "Runs a small e-commerce shop in Miami"}
+{"customer_id": "cust_06", "query": "What problems has the customer reported?", "category": "issue", "expected": "Webhooks time out since Monday"}
+{"customer_id": "cust_07", "query": "What problems has the customer reported?", "category": "issue", "expected": "Mobile app crashes when opening the reports tab"}
+{"customer_id": "cust_07", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_07", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Has the Business plan, billed annually"}
+{"customer_id": "cust_07", "query": "How does the customer like answers formatted?", "category": "preference", "expected": "Prefers short bullet-point replies"}
+{"customer_id": "cust_07", "query": "What business is the customer in?", "category": "profile", "expected": "Runs a small e-commerce shop in Miami"}
+{"customer_id": "cust_08", "query": "What problems has the customer reported?", "category": "issue", "expected": "Okta SSO login fails for new users"}
+{"customer_id": "cust_08", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_08", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers to be contacted on WhatsApp"}
+{"customer_id": "cust_08", "query": "Any UI preferences?", "category": "preference", "expected": "Prefers the dark theme"}
+{"customer_id": "cust_08", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Has the Business plan, billed annually"}
+{"customer_id": "cust_09", "query": "What problems has the customer reported?", "category": "issue", "expected": "Okta SSO login fails for new users"}
+{"customer_id": "cust_09", "query": "What language does the customer prefer?", "category": "preference", "expected": "Prefers support in Spanish"}
+{"customer_id": "cust_09", "query": "Who is this customer?", "category": "profile", "expected": "Leads the data team at a logistics company"}
+{"customer_id": "cust_09", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_09", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Has the Business plan, billed annually"}
+{"customer_id": "cust_10", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_10", "query": "Any billing problems?", "category": "issue", "expected": "Was charged twice for October"}
+{"customer_id": "cust_10", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_10", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_10", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_11", "query": "Any billing problems?", "category": "issue", "expected": "Was charged twice for October"}
+{"customer_id": "cust_11", "query": "Who is this customer?", "category": "profile", "expected": "Leads the data team at a logistics company"}
+{"customer_id": "cust_11", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_11", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_11", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_12", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_12", "query": "What problems has the customer reported?", "category": "issue", "expected": "Mobile app crashes when opening the reports tab"}
+{"customer_id": "cust_12", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_12", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_12", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_13", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_13", "query": "How does the customer like answers formatted?", "category": "preference", "expected": "Prefers short bullet-point replies"}
+{"customer_id": "cust_13", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_13", "query": "Any data export issues?", "category": "issue", "expected": "CSV export truncates after 10,000 rows"}
+{"customer_id": "cust_13", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_14", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_14", "query": "What problems has the customer reported?", "category": "issue", "expected": "Okta SSO login fails for new users"}
+{"customer_id": "cust_14", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_14", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_14", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
+{"customer_id": "cust_15", "query": "Any data export issues?", "category": "issue", "expected": "CSV export truncates after 10,000 rows"}
+{"customer_id": "cust_15", "query": "What business is the customer in?", "category": "profile", "expected": "Runs a small e-commerce shop in Miami"}
+{"customer_id": "cust_15", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_15", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers email over phone calls"}
+{"customer_id": "cust_15", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Has the Business plan, billed annually"}
+{"customer_id": "cust_16", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_16", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_16", "query": "What problems has the customer reported?", "category": "issue", "expected": "Mobile app crashes when opening the reports tab"}
+{"customer_id": "cust_16", "query": "What business is the customer in?", "category": "profile", "expected": "Runs a small e-commerce shop in Miami"}
+{"customer_id": "cust_16", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Has the Business plan, billed annually"}
+{"customer_id": "cust_17", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_17", "query": "Any billing problems?", "category": "issue", "expected": "Was charged twice for October"}
+{"customer_id": "cust_17", "query": "When can we call the customer?", "category": "contact_preference", "expected": "Wants calls only after 6pm Eastern"}
+{"customer_id": "cust_17", "query": "What plan is the customer on?", "category": "plan", "expected": "Has the Pro plan with 25 seats"}
+{"customer_id": "cust_17", "query": "What business is the customer in?", "category": "profile", "expected": "Nonprofit with about 12 volunteer users"}
+{"customer_id": "cust_18", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers to be contacted on WhatsApp"}
+{"customer_id": "cust_18", "query": "Any UI preferences?", "category": "preference", "expected": "Prefers the dark theme"}
+{"customer_id": "cust_18", "query": "What problems has the customer reported?", "category": "issue", "expected": "Mobile app crashes when opening the reports tab"}
+{"customer_id": "cust_18", "query": "What business is the customer in?", "category": "profile", "expected": "Nonprofit with about 12 volunteer users"}
+{"customer_id": "cust_18", "query": "Which subscription does the customer have?", "category": "plan", "expected": "Uses the free tier"}
+{"customer_id": "cust_19", "query": "How should we contact this customer?", "category": "contact_preference", "expected": "Prefers to be contacted on WhatsApp"}
+{"customer_id": "cust_19", "query": "How does the customer want invoices?", "category": "preference", "expected": "Wants invoices as PDF"}
+{"customer_id": "cust_19", "query": "What plan is the customer on?", "category": "plan", "expected": "Upgraded to the Enterprise plan"}
+{"customer_id": "cust_19", "query": "What problems has the customer reported?", "category": "issue", "expected": "Okta SSO login fails for new users"}
+{"customer_id": "cust_19", "query": "Who is this customer?", "category": "profile", "expected": "IT admin at a 40-person dental clinic"}
