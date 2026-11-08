@@ -51,3 +51,12 @@ class FactStore:
         order = np.argsort(-scores)[:k]
         return [RecallHit(fact=StoredFact(id=rows[i][0], customer_id=rows[i][1], category=rows[i][2], value=rows[i][3],
                                           created_at=rows[i][4]), score=round(float(scores[i]), 4)) for i in order]
+
+
+def get_store(**kw):
+    """STORE=sqlite (default) or STORE=postgres (PostgresFactStore, PG_DSN)."""
+    import os
+    if os.getenv("STORE", "sqlite").lower() == "postgres":
+        from .pgstore import PostgresFactStore
+        return PostgresFactStore(**kw)
+    return FactStore(os.getenv("MEMORY_DB", "memory.db"), **kw)

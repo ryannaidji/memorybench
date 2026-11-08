@@ -11,6 +11,28 @@ services:
       EMBED_MODEL: nomic-embed-text
     volumes: [data:/data]
     ports: ["8000:8000"]
+  # --- v0.3 streaming ingestion (start with: docker compose up -d redpanda postgres) ---
+  redpanda:
+    image: redpandadata/redpanda:v24.2.7
+    command:
+      - redpanda start
+      - --smp 1
+      - --memory 512M
+      - --overprovisioned
+      - --mode dev-container
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+    ports: ["19092:19092"]
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: memorybench
+      POSTGRES_PASSWORD: memorybench
+      POSTGRES_DB: memorybench
+    command: postgres -c shared_buffers=64MB
+    ports: ["55432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
 volumes:
   ollama:
   data:
+  pgdata:

@@ -9,10 +9,10 @@ from pydantic import BaseModel
 
 from .extract import extract
 from .schemas import Conversation, Fact, RecallHit, StoredFact
-from .store import FactStore
+from .store import get_store
 
 app = FastAPI(title="MemoryBench", version="0.1.0")
-store = FactStore(os.getenv("MEMORY_DB", "memory.db"))
+store = get_store()
 
 
 class IngestResponse(BaseModel):

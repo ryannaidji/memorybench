@@ -17,6 +17,38 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pytest -q
 
+  integration-tests:
+    # Streaming pipeline against real services: PostgreSQL+pgvector as a service container, Redpanda via docker run.
+    # No LLM: tests use a fake extractor + fake embeddings.
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: memorybench
+          POSTGRES_PASSWORD: memorybench
+          POSTGRES_DB: memorybench
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U memorybench" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PG_DSN: postgresql://memorybench:memorybench@localhost:5432/memorybench
+      KAFKA_BOOTSTRAP: localhost:29092
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Start Redpanda (a service container cannot take the start flags it needs, so run it here)
+        run: |
+          docker run -d --name rp -p 29092:29092 redpandadata/redpanda:v24.2.7 redpanda start --smp 1 --memory 512M --overprovisioned --mode dev-container --kafka-addr 0.0.0.0:29092 --advertise-kafka-addr localhost:29092
+          for i in $(seq 1 30); do docker exec rp rpk cluster health 2>/dev/null | grep -q 'Healthy:.*true' && break; sleep 2; done
+          docker exec rp rpk cluster health
+      - name: Integration tests
+        run: pytest -q -m integration -rs
+
   eval-gate:
     # Real LLM eval on a free GitHub runner: Ollama + a small open-weight model on CPU.
     # Fails the build if extraction/retrieval quality drops below evals/thresholds.json.
