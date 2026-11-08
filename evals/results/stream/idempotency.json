@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-08T06:30:53+00:00",
+  "model": "memorybench-qwen1.5b-ft",
+  "bootstrap": "localhost:19092",
+  "topic": "conversations",
+  "ollama_num_parallel": "unset (Ollama default)",
+  "machine": "single laptop, CPU only (Intel, 8 cores), Docker Desktop: Redpanda --smp 1 --memory 512M, pgvector/pg16",
+  "n_conversations": 15,
+  "after_first_pass": {
+    "events": 15,
+    "facts": 25
+  },
+  "after_replay_same_event_ids": {
+    "events": 15,
+    "facts": 25,
+    "processed": 15,
+    "duplicate_skipped": 15,
+    "sent_to_dlq": 0
+  },
+  "after_replay_new_event_ids": {
+    "events": 30,
+    "facts": 25,
+    "processed": 30,
+    "duplicate_skipped": 15,
+    "sent_to_dlq": 0
+  },
+  "facts_unchanged": true
+}

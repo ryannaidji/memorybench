@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-08T06:15:23+00:00",
+  "model": "memorybench-qwen1.5b-ft",
+  "bootstrap": "localhost:19092",
+  "topic": "conversations",
+  "ollama_num_parallel": "unset (Ollama default)",
+  "machine": "single laptop, CPU only (Intel, 8 cores), Docker Desktop: Redpanda --smp 1 --memory 512M, pgvector/pg16",
+  "n_conversations": 30,
+  "runs": [
+    {
+      "consumers": 1,
+      "partitions": 3,
+      "completed": true,
+      "produced": 30,
+      "processed_distinct": 30,
+      "facts": 50,
+      "wall_s": 225.7,
+      "throughput_conv_per_min": 7.98,
+      "e2e_latency_p50_s": 119.48,
+      "e2e_latency_p95_s": 217.99,
+      "extract_ms_p50": 7631,
+      "per_consumer": {
+        "c0": 30
+      },
+      "per_partition": {
+        "0": 12,
+        "1": 12,
+        "2": 6
+      },
+      "log_counts": {
+        "processed": 30,
+        "duplicate_skipped": 0,
+        "sent_to_dlq": 0
+      }
+    },
+    {
+      "consumers": 2,
+      "partitions": 3,
+      "completed": true,
+      "produced": 30,
+      "processed_distinct": 30,
+      "facts": 50,
+      "wall_s": 245.0,
+      "throughput_conv_per_min": 7.35,
+      "e2e_latency_p50_s": 126.2,
+      "e2e_latency_p95_s": 233.61,
+      "extract_ms_p50": 9967,
+      "per_consumer": {
+        "c0": 24,
+        "c1": 6
+      },
+      "per_partition": {
+        "0": 12,
+        "1": 12,
+        "2": 6
+      },
+      "log_counts": {
+        "processed": 30,
+        "duplicate_skipped": 0,
+        "sent_to_dlq": 0
+      }
+    },
+    {
+      "consumers": 3,
+      "partitions": 3,
+      "completed": true,
+      "produced": 30,
+      "processed_distinct": 30,
+      "facts": 50,
+      "wall_s": 400.2,
+      "throughput_conv_per_min": 4.5,
+      "e2e_latency_p50_s": 229.73,
+      "e2e_latency_p95_s": 392.76,
+      "extract_ms_p50": 27742,
+      "per_consumer": {
+        "c0": 12,
+        "c1": 12,
+        "c2": 6
+      },
+      "per_partition": {
+        "0": 12,
+        "1": 12,
+        "2": 6
+      },
+      "log_counts": {
+        "processed": 30,
+        "duplicate_skipped": 0,
+        "sent_to_dlq": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-08T06:39:04+00:00",
+  "model": "memorybench-qwen1.5b-ft",
+  "bootstrap": "localhost:19092",
+  "topic": "conversations",
+  "ollama_num_parallel": "unset (Ollama default)",
+  "machine": "single laptop, CPU only (Intel, 8 cores), Docker Desktop: Redpanda --smp 1 --memory 512M, pgvector/pg16",
+  "completed": true,
+  "killed_consumer": "c0",
+  "killed": {
+    "at_processed": 6,
+    "at": "2026-11-08T06:40:55+00:00"
+  },
+  "produced": 20,
+  "processed_distinct": 20,
+  "facts": 34,
+  "wall_s": 219.6,
+  "throughput_conv_per_min": 5.46,
+  "e2e_latency_p50_s": 154.97,
+  "e2e_latency_p95_s": 212.7,
+  "extract_ms_p50": 8343,
+  "per_consumer": {
+    "c0": 3,
+    "c1": 17
+  },
+  "per_partition": {
+    "0": 8,
+    "1": 9,
+    "2": 3
+  },
+  "dlq_messages": 2,
+  "log_counts": {
+    "processed": 20,
+    "duplicate_skipped": 0,
+    "sent_to_dlq": 2
+  },
+  "no_loss": true
+}
